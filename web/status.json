@@ -1,0 +1,6 @@
+{
+    "garage": true,
+    "fan": false,
+    "pump": false,
+    "lights": [true, false, false, true, true, false, true, false]
+}

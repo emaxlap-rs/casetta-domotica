@@ -1,7 +1,7 @@
 # casetta-domotica
 Repository dei file del progetto della casetta domotica per l'esame di stato.
 
-*Componenti gruppo:*
+*Componenti del gruppo:*
 - Corbo Davide
 - D'Arasmo Vincenzo
 - Lapenna Emanuele

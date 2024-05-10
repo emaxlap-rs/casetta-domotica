@@ -1,0 +1,12 @@
+Dimensioni in quadratini : 22 x 14
+Dimensioni quadratino : 3,6cm x 3,6cm
+Dimensioni teoriche : 79,2cm x 50,4cm
+
+Garage : 18cm x 25,2cm (5 x 7)
+Bagno : 14,4cm x 10,8cm (4 x 3)
+Corridoio : 28,8cm x 7,2cm (8 x 2)
+Camera da letto : 14,4cm x 14,4cm (4 x 4)
+Cameretta : 14,4cm x 14,4cm (4 x 4)
+Cucina : 32,4cm x 10,8cm (9 x 3)
+Ingresso : 32,4cm x 21,6cm (9 x 6)
+Salotto : 21,6cm x 18cm (6 x 5)

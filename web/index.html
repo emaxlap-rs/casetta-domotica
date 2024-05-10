@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./grid.css">
+        <link rel="stylesheet" href="./switch.css">
+        <title>Pannello di controllo</title>
+    </head>
+    <body>
+        <div id="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div id="page">
+            <h1 id="title">Pannello di controllo</h1>
+            <div class="content">
+                <div class="left">
+                    <div id="lights">
+                        <h3>💡 Luci 💡</h3>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <div id="garage">
+                        <h3>🚗 Garage 🚗</h3>
+                        <div class="row">
+                            <p>Serranda</p>
+                            <label class="switch">
+                                <input type="checkbox" name="garage" id="garage-input">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="fan">
+                        <h3>🍃 Ventilatore 🍃</h3>
+                        <div class="row">
+                            <p>Ventilazione</p>
+                            <label class="switch">
+                                <input type="checkbox" name="fan" id="fan-input">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="pump">
+                        <h3>⛲ Irrigazione ⛲</h3>
+                        <div class="row">
+                            <p>Pompa</p>
+                            <label class="switch">
+                                <input type="checkbox" name="pump" id="pump-input">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="door">
+                        <h3>🔐 Lucchetto 🔐</h3>
+                        <div class="centered row">
+                            <b id="door-status" class="open">Aperto</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

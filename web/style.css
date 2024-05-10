@@ -1,0 +1,64 @@
+:root {
+    --foreground: #2C3E50;
+    --primary: #E74C3C;
+    --secondary: #3498DB;
+    --background: #ECF0F1;
+
+    --open: #22DD22;
+    --closed: #DD2222;
+}
+
+* {
+    font-family: sans-serif;
+    color: var(--foreground);
+}
+
+body {
+    margin: 0px;
+    background-color: var(--background);
+}
+
+b {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row>* {
+    margin: 10px;
+}
+.centered.row {
+    justify-content: center;
+}
+
+.open {
+    color: var(--open);
+}
+.closed {
+    color: var(--closed);
+}
+.open, .closed {
+    background-color: var(--foreground);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#title {
+    text-align: center;
+}
+
+#loading {
+    opacity: 1;
+}
+
+#page {
+    opacity: 0;
+}
