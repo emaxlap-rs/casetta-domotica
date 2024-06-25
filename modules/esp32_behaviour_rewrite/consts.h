@@ -1,6 +1,6 @@
 const char* TAG = "ESP-32 Module";
-const char* SSID = "TP-LINK_F79280"; //"DOMOTICA";
-const char* PASSWORD = "06182533";
+const char* SSID = "Domotica Lapenna";
+const char* PASSWORD = "domotica";
 const long OPEN_TAG = 0x3D8279;
 const long CLOSE_TAG = 0x3D7235;
 

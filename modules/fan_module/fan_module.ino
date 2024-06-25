@@ -1,35 +1,40 @@
 #include <DHT.h>
+#include <SoftwareSerial.h>
 
-#define DHT_PIN 2
-#define FAN_PIN 3
-#define DEBUG_LED LED_BUILTIN
+#define DHT_PIN 3
+#define FAN_PIN 4
 
-const float MAX_TEMP = 25; 
+SoftwareSerial esp(2, NULL);
+
+const float MAX_TEMP = 26; 
+float last_temp = 0;
 
 DHT dht(DHT_PIN, DHT11);
 bool val = false;
 
 void setup() {
   Serial.begin(9600);
+  esp.begin(9600);
   pinMode(FAN_PIN, OUTPUT);
-  pinMode(DEBUG_LED, OUTPUT);
   dht.begin();
 }
 
 void loop() {
-  if (Serial.available() > 0) {
-    val = Serial.read();
+  if (esp.available() > 0) {
+    val = esp.read();
+    Serial.print("[SoftwareSerial] Received: 0x");
+    Serial.println(val, HEX);
   }
   float t = dht.readTemperature();
   if (isnan(t)) {
-    for (int i = 0; i < 3; i++) {
-      digitalWrite(DEBUG_LED, HIGH);
-      delay(200);
-      digitalWrite(DEBUG_LED, LOW);
-      delay(200);
-    }
+    Serial.println("[Error] DHT sensor unavailable");
     delay(500);
     return;
   }
-  digitalWrite(FAN_PIN, (t >= MAX_TEMP && val)); 
+  digitalWrite(FAN_PIN, (t >= MAX_TEMP && val));
+  if (last_temp != t) {
+    Serial.print("[Update] Temperature: ");
+    Serial.println(t);
+    last_temp = t;
+  }
 }

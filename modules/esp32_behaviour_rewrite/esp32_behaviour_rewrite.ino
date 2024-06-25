@@ -135,11 +135,16 @@ void applyChanges() {
   for (int i = 0; i < 8; i++) {
     lights_byte |= ((status.lights[i] ? 1 : 0) << i);
   }
+  LightsModule.begin(9600);
   LightsModule.write(lights_byte);
-  GarageModule.write(status.garage ? (byte)1 : (byte)0);
-  FanModule.write(status.fan ? (byte)1 : (byte)0);
-  PumpModule.write(status.pump ? (byte)1 : (byte)0);
-  DoorModule.write(status.door ? (byte)1 : (byte)0);
+  GarageModule.begin(9600);
+  GarageModule.write((byte)status.garage);
+  FanModule.begin(9600);
+  FanModule.write((byte)status.fan);
+  PumpModule.begin(9600);
+  PumpModule.write((byte)status.pump);
+  DoorModule.begin(9600);
+  DoorModule.write((byte)status.door);
   ESP_LOGI(TAG, "Lights: 0x%X, Garage: 0x%X, Fan: 0x%X, Pump: 0x%X, Door: 0x%X", lights_byte, status.garage, status.fan, status.pump, status.door);
 }
 
